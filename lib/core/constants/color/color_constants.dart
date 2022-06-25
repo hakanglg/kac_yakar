@@ -8,7 +8,7 @@ class ColorConstants {
   final perfume = const Color(0xFFEBD4FB);
   final magnolia = const Color(0xFFF8F4FF);
   final shark = const Color(0xFF1B1C1F);
-  final lightShark = const Color(0xFF1B1C1F);
+  final lightShark = const Color(0xFF272A31);
   final shutleGray = const Color(0xFF60636F);
   final monsoon = const Color(0xFF8C8A8C);
   final white = const Color(0xFFffffff);

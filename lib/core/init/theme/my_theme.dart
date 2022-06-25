@@ -13,4 +13,8 @@ ThemeData myTheme = ThemeData(
     textTheme: TextTheme(
         headline6: TextStyle(
             color: ColorConstants.instance.white,
-            fontWeight: FontWeight.bold)));
+            fontSize: 32,
+            fontWeight: FontWeight.normal),
+        subtitle2: TextStyle(color: ColorConstants.instance.monsoon)),
+    outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(shape: const StadiumBorder())));
