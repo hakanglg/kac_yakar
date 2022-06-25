@@ -4,6 +4,7 @@ import 'package:kac_yakar/core/components/row/my_row.dart';
 import 'package:kac_yakar/product/components/container/white_background.dart';
 import 'package:kartal/kartal.dart';
 
+import '../../../core/components/button/detail_button.dart';
 import '../../../product/components/appbar/appbar.dart';
 
 class HomeView extends StatelessWidget with BaseState {
@@ -73,7 +74,7 @@ class HomeView extends StatelessWidget with BaseState {
                                   style: TextStyle(color: colorConstants.white),
                                 )),
                           ),
-                          context.emptySizedWidthBoxHigh,
+                          context.emptySizedWidthBoxNormal,
                           Expanded(
                             child: OutlinedButton(
                                 onPressed: () {},
@@ -86,78 +87,52 @@ class HomeView extends StatelessWidget with BaseState {
                       ),
                       context.emptySizedHeightBoxNormal,
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Expanded(
-                              child: Card(
-                            shape: const StadiumBorder(),
-                            color: colorConstants.lightShark,
-                            child: ListTile(
-                              contentPadding:
-                                  const EdgeInsets.symmetric(horizontal: 10),
-                              dense: true,
-                              leading: CircleAvatar(
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    gradient:
-                                        borderConstants.purplelinearGradient,
-                                  ),
-                                ),
-                              ),
-                              title: Text(
-                                "Marka",
-                                style: context.textTheme.bodyText2!.copyWith(
-                                    color: colorConstants.white,
-                                    fontWeight: FontWeight.w700),
-                              ),
-                              subtitle: Text(
-                                "Marka",
-                                style: context.textTheme.subtitle2!
-                                    .copyWith(fontSize: 10),
-                              ),
-                              trailing: Icon(
-                                Icons.arrow_drop_down_circle_outlined,
-                                color: colorConstants.perfume,
-                              ),
-                            ),
+                              child: DetailButton(
+                            title: "marka",
+                            subtitle: "toyota",
                           )),
+                          context.emptySizedWidthBoxNormal,
                           Expanded(
-                              child: Card(
-                            shape: const StadiumBorder(),
-                            color: colorConstants.lightShark,
-                            child: ListTile(
-                              contentPadding:
-                                  const EdgeInsets.symmetric(horizontal: 10),
-                              dense: true,
-                              leading: CircleAvatar(
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    gradient:
-                                        borderConstants.purplelinearGradient,
-                                  ),
-                                ),
-                              ),
-                              title: Text(
-                                "Marka",
-                                style: context.textTheme.bodyText2!.copyWith(
-                                    color: colorConstants.white,
-                                    fontWeight: FontWeight.w700),
-                              ),
-                              subtitle: Text(
-                                "Marka",
-                                style: context.textTheme.subtitle2!
-                                    .copyWith(fontSize: 10),
-                              ),
-                              trailing: Icon(
-                                Icons.arrow_drop_down_circle_outlined,
-                                color: colorConstants.perfume,
-                              ),
-                            ),
-                          ))
+                              child: DetailButton(
+                            title: "seri",
+                            subtitle: "corolla",
+                          )),
                         ],
-                      )
+                      ),
+                      context.emptySizedHeightBoxNormal,
+                      Row(
+                        children: [
+                          Expanded(
+                              child: DetailButton(
+                            title: "kasa",
+                            subtitle: "sedan",
+                          )),
+                          context.emptySizedWidthBoxNormal,
+                          Expanded(
+                              child: DetailButton(
+                            title: "tip",
+                            subtitle: "1.4 d-4d",
+                          )),
+                        ],
+                      ),
+                      context.emptySizedHeightBoxNormal,
+                      Row(
+                        children: [
+                          Expanded(
+                              child: DetailButton(
+                            title: "vites",
+                            subtitle: "manuel",
+                          )),
+                          context.emptySizedWidthBoxNormal,
+                          Expanded(
+                              child: DetailButton(
+                            title: "yakıt",
+                            subtitle: "dizel",
+                          )),
+                        ],
+                      ),
                     ],
                   ))
             ],
