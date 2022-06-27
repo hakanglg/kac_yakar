@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: ApplicationConstants.APP_NAME,
       theme: context.watch<ThemeNotifier>().getTheme,
-      initialRoute: NavigateRoutes.home.withParam,
+      initialRoute: NavigateRoutes.onboard.withParam,
       routes: NavigatorRoutes().items,
     );
   }
