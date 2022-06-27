@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: const SplashView(),
+      home: SplashView(),
       // initialRoute: NavigateRoutes.onboard.withParaf,
       // routes: NavigatorRoutes().items,
     );
