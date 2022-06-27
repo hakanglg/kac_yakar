@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kac_yakar/core/base/base_state.dart';
 import 'package:kartal/kartal.dart';
+
+import '../../base/base_state.dart';
 
 class DetailButton extends StatelessWidget with BaseState {
   DetailButton({

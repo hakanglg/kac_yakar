@@ -23,7 +23,10 @@ class GasModel {
 class Result {
   String? marka;
   double? benzin;
+  double? dizel;
   dynamic katkili;
+  String? lpg;
+  
 
   Result({this.marka, this.benzin, this.katkili});
 

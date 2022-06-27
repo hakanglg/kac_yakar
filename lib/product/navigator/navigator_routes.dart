@@ -1,5 +1,5 @@
-import 'package:kac_yakar/feature/home/view/home_view.dart';
-import 'package:kac_yakar/feature/onboard/view/onboard_view.dart';
+import '../../feature/home/view/home_view.dart';
+import '../../feature/onboard/view/onboard_view.dart';
 
 class NavigatorRoutes {
   static const slash = "/";

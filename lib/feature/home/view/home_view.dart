@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:kac_yakar/core/base/base_state.dart';
-import 'package:kac_yakar/core/components/row/my_row.dart';
-import 'package:kac_yakar/product/components/container/white_background.dart';
 import 'package:kartal/kartal.dart';
 
+import '../../../core/base/base_state.dart';
 import '../../../core/components/button/detail_button.dart';
+import '../../../core/components/row/my_row.dart';
 import '../../../product/components/appbar/appbar.dart';
+import '../../../product/components/container/white_background.dart';
 
 class HomeView extends StatelessWidget with BaseState {
   HomeView({Key? key}) : super(key: key);

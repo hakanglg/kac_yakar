@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:kac_yakar/core/base/base_state.dart';
-import 'package:kac_yakar/core/components/column/my_column.dart';
-import 'package:kac_yakar/core/components/row/my_row.dart';
-import 'package:kac_yakar/core/constants/lottie/lottie_enum.dart';
-import 'package:kac_yakar/core/manager/navigation_manager.dart';
-import 'package:kac_yakar/product/components/text/default_headline.dart';
-import 'package:kac_yakar/product/components/text/default_subtitle.dart';
-import 'package:kac_yakar/product/navigator/navigator_routes.dart';
+import '../../../core/base/base_state.dart';
+import '../../../core/components/column/my_column.dart';
+import '../../../core/components/row/my_row.dart';
+import '../../../core/constants/lottie/lottie_enum.dart';
+import '../../../core/manager/navigation_manager.dart';
+import '../../../product/components/text/default_headline.dart';
+import '../../../product/components/text/default_subtitle.dart';
+import '../../../product/navigator/navigator_routes.dart';
 import 'package:kartal/kartal.dart';
 import 'package:lottie/lottie.dart';
 

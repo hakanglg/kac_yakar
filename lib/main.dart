@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kac_yakar/feature/deneme.dart';
+import 'feature/splash/view/splash_view.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: const DenemeView(),
+      home: const SplashView(),
       // initialRoute: NavigateRoutes.onboard.withParaf,
       // routes: NavigatorRoutes().items,
     );

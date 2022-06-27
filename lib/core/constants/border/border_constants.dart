@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:kac_yakar/core/constants/color/color_constants.dart';
+
+import '../color/color_constants.dart';
 
 class BorderConstants {
   static BorderConstants instance = BorderConstants._init();

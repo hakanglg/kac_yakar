@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kac_yakar/core/constants/color/color_constants.dart';
+
+import '../../constants/color/color_constants.dart';
 
 ThemeData myTheme = ThemeData(
     useMaterial3: true,
