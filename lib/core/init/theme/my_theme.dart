@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:kac_yakar/core/constants/app/app_constants.dart';
 
 import '../../constants/color/color_constants.dart';
 
 ThemeData myTheme = ThemeData(
     useMaterial3: true,
-    fontFamily: "Poppins",
+    fontFamily: ApplicationConstants.FONT_FAMILY,
     scaffoldBackgroundColor: ColorConstants.instance.shark,
     appBarTheme: AppBarTheme(
         backgroundColor: Colors.transparent,
