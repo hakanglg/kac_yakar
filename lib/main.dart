@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: context.watch<ThemeNotifier>().getTheme,
-      initialRoute: NavigateRoutes.home.withParaf,
+      initialRoute: NavigateRoutes.home.withParam,
       routes: NavigatorRoutes().items,
     );
   }

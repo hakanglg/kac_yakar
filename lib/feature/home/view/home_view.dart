@@ -4,6 +4,7 @@ import 'package:kartal/kartal.dart';
 import '../../../core/base/base_state.dart';
 import '../../../core/components/button/detail_button.dart';
 import '../../../core/components/row/my_row.dart';
+import '../../../core/components/three_dot/three_circle_dot.dart';
 import '../../../product/components/appbar/appbar.dart';
 import '../../../product/components/container/white_background.dart';
 
@@ -17,41 +18,7 @@ class HomeView extends StatelessWidget with BaseState {
         body: MyRow(
           child: Column(
             children: [
-              Expanded(
-                  flex: 2,
-                  child: WhiteBackground(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Card(
-                          color: colorConstants.lightShark,
-                          child: ListTile(
-                            leading: Padding(
-                              padding: const EdgeInsets.only(top: 5),
-                              child: _iconExample(),
-                            ),
-                            title: Text("Tekirdağ",
-                                style: context.textTheme.bodyText1!
-                                    .copyWith(color: colorConstants.white)),
-                          ),
-                        ),
-                        _threeCircleDot(context),
-                        Card(
-                          color: colorConstants.lightShark,
-                          child: ListTile(
-                            leading: Padding(
-                              padding: const EdgeInsets.only(top: 5),
-                              child: _iconExample(),
-                            ),
-                            title: Text("Bodrum",
-                                style: context.textTheme.bodyText1!
-                                    .copyWith(color: colorConstants.white)),
-                          ),
-                        )
-                      ],
-                    ),
-                  )),
+              Expanded(flex: 2, child: _selectCitySection(context)),
               context.emptySizedHeightBoxNormal,
               Expanded(
                   flex: 3,
@@ -140,27 +107,39 @@ class HomeView extends StatelessWidget with BaseState {
         ));
   }
 
-  Column _threeCircleDot(BuildContext context) {
-    return Column(
-      children: [
-        Icon(
-          Icons.circle,
-          color: colorConstants.lightShark,
-          size: 7,
-        ),
-        context.emptySizedHeightBoxLow,
-        Icon(
-          Icons.circle,
-          color: colorConstants.lightShark,
-          size: 7,
-        ),
-        context.emptySizedHeightBoxLow,
-        Icon(
-          Icons.circle,
-          color: colorConstants.lightShark,
-          size: 7,
-        )
-      ],
+  WhiteBackground _selectCitySection(BuildContext context) {
+    return WhiteBackground(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Card(
+            color: colorConstants.lightShark,
+            child: ListTile(
+              leading: Padding(
+                padding: const EdgeInsets.only(top: 5),
+                child: _iconExample(),
+              ),
+              title: Text("Tekirdağ",
+                  style: context.textTheme.bodyText1!
+                      .copyWith(color: colorConstants.white)),
+            ),
+          ),
+          ThreeCircleDot(),
+          Card(
+            color: colorConstants.lightShark,
+            child: ListTile(
+              leading: Padding(
+                padding: const EdgeInsets.only(top: 5),
+                child: _iconExample(),
+              ),
+              title: Text("Bodrum",
+                  style: context.textTheme.bodyText1!
+                      .copyWith(color: colorConstants.white)),
+            ),
+          )
+        ],
+      ),
     );
   }
 

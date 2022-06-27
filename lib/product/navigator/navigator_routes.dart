@@ -6,10 +6,10 @@ import '../../feature/onboard/view/onboard_view.dart';
 class NavigatorRoutes {
   static const slash = "/";
   final items = {
-    NavigateRoutes.splash.withParaf: (context) => SplashView(),
-    NavigateRoutes.onboard.withParaf: (context) =>
+    NavigateRoutes.splash.withParam: (context) => SplashView(),
+    NavigateRoutes.onboard.withParam: (context) =>
         OnboardView(), // Splash Lottie LEARN
-    NavigateRoutes.home.withParaf: ((context) =>
+    NavigateRoutes.home.withParam: ((context) =>
         HomeView()), // NavigationHomeView
   };
 }
@@ -17,5 +17,5 @@ class NavigatorRoutes {
 enum NavigateRoutes { onboard, home, splash }
 
 extension NavigateRoutesExtension on NavigateRoutes {
-  String get withParaf => "/$name";
+  String get withParam => "/$name";
 }

@@ -64,7 +64,7 @@ class OnboardView extends StatelessWidget with BaseState, NavigatorManager {
   IconButton _goHomeIconButton(BuildContext context) {
     return IconButton(
         onPressed: () => Navigator.pushReplacementNamed(
-            context, NavigateRoutes.home.withParaf),
+            context, NavigateRoutes.home.withParam),
         icon: Icon(
           Icons.navigate_next,
           color: colorConstants.white,
