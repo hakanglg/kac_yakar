@@ -1,3 +1,5 @@
+import 'package:kac_yakar/core/constants/app/app_constants.dart';
+
 enum LottieItems { onboardNavigator }
 
 extension LottieItemsExtension on LottieItems {
@@ -8,5 +10,6 @@ extension LottieItemsExtension on LottieItems {
     }
   }
 
-  String get lottiePath => "assets/lottie/lottie_${_path()}.json";
+  String get lottiePath =>
+      "${ApplicationConstants.FONT_ASSETS_PATH}lottie_${_path()}.json";
 }

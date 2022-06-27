@@ -5,11 +5,15 @@ import '../../../core/base/base_state.dart';
 import '../../../core/components/button/detail_button.dart';
 import '../../../core/components/row/my_row.dart';
 import '../../../core/components/three_dot/three_circle_dot.dart';
+import '../../../core/constants/button/custom_outlined_linear_button.dart';
 import '../../../product/components/appbar/appbar.dart';
 import '../../../product/components/container/white_background.dart';
 
 class HomeView extends StatelessWidget with BaseState {
   HomeView({Key? key}) : super(key: key);
+
+  final testStringPickTheCar = "araç seçiniz";
+  final testStringManuel = "manuel";
 
   @override
   Widget build(BuildContext context) {
@@ -28,28 +32,15 @@ class HomeView extends StatelessWidget with BaseState {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Expanded(
-                            child: OutlinedButton(
-                                style: OutlinedButton.styleFrom(
-                                    side: BorderSide(
-                                        color:
-                                            colorConstants.legendaryLevender),
-                                    backgroundColor:
-                                        colorConstants.legendaryLevender),
-                                onPressed: () {},
-                                child: Text(
-                                  "ARAÇ SEÇİNİZ",
-                                  style: TextStyle(color: colorConstants.white),
-                                )),
-                          ),
+                              child: CustomOutlinedLinearButton(
+                                  isSelected: true,
+                                  text: testStringPickTheCar)),
                           context.emptySizedWidthBoxNormal,
                           Expanded(
-                            child: OutlinedButton(
-                                onPressed: () {},
-                                child: Text(
-                                  "manuel".toUpperCase(),
-                                  style: TextStyle(color: colorConstants.white),
-                                )),
-                          ),
+                              child: CustomOutlinedLinearButton(
+                            text: testStringManuel,
+                            isSelected: false,
+                          )),
                         ],
                       ),
                       context.emptySizedHeightBoxNormal,
