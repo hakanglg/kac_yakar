@@ -38,7 +38,14 @@ class DetailButton extends StatelessWidget with BaseState {
         title: Text(
           title.toCapitalized(),
           style: context.textTheme.bodyText2!.copyWith(
-              color: colorConstants.white, fontWeight: FontWeight.w700),
+              color: colorConstants.white,
+              fontWeight: FontWeight.w700,
+              shadows: [
+                Shadow(
+                    color: Colors.black.withOpacity(0.3),
+                    offset: const Offset(15, 15),
+                    blurRadius: 15),
+              ]),
         ),
         subtitle: Text(
           subtitle.toUpperCase(),

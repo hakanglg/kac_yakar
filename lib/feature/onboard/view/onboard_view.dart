@@ -4,9 +4,9 @@ import 'package:kac_yakar/core/components/column/my_column.dart';
 import 'package:kac_yakar/core/components/row/my_row.dart';
 import 'package:kac_yakar/core/constants/lottie/lottie_enum.dart';
 import 'package:kac_yakar/core/manager/navigation_manager.dart';
-import 'package:kac_yakar/feature/home/view/home_view.dart';
 import 'package:kac_yakar/product/components/text/default_headline.dart';
 import 'package:kac_yakar/product/components/text/default_subtitle.dart';
+import 'package:kac_yakar/product/navigator/navigator_routes.dart';
 import 'package:kartal/kartal.dart';
 import 'package:lottie/lottie.dart';
 
@@ -63,7 +63,8 @@ class OnboardView extends StatelessWidget with BaseState, NavigatorManager {
 
   IconButton _goHomeIconButton(BuildContext context) {
     return IconButton(
-        onPressed: () => navigateAndRemoveToWidget(context, HomeView()),
+        onPressed: () => Navigator.pushReplacementNamed(
+            context, NavigateRoutes.home.withParaf),
         icon: Icon(
           Icons.navigate_next,
           color: colorConstants.white,
