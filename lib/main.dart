@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
-import 'feature/splash/view/splash_view.dart';
+import 'package:kac_yakar/product/global/theme/theme_notifier.dart';
+import 'package:kac_yakar/product/navigator/navigator_routes.dart';
+import 'package:provider/provider.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MultiProvider(providers: [
+      ChangeNotifierProvider<ThemeNotifier>(
+          create: (context) => ThemeNotifier()),
+    ], child: const MyApp()));
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
-      home: SplashView(),
-      // initialRoute: NavigateRoutes.onboard.withParaf,
-      // routes: NavigatorRoutes().items,
+      theme: context.watch<ThemeNotifier>().getTheme,
+      initialRoute: NavigateRoutes.home.withParaf,
+      routes: NavigatorRoutes().items,
     );
   }
 }
