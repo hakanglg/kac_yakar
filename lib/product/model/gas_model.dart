@@ -26,13 +26,8 @@ class Result {
   double? dizel;
   dynamic katkili;
   String? lpg;
-  
 
   Result({this.marka, this.benzin, this.katkili});
-
-  void get adasd {
-    double.tryParse(benzin.toString()) ?? 0;
-  }
 
   factory Result.fromJson(Map<String, dynamic> json) {
     return _$ResultFromJson(json);

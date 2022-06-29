@@ -48,7 +48,7 @@ class OnboardView extends StatelessWidget with BaseState, NavigatorManager {
   Padding _headliniText(BuildContext context) {
     return Padding(
       padding: context.horizontalPaddingLow,
-      child: const DefaultHeadline(
+      child: DefaultHeadline(
         text: "Lorem Ipsum Dolar, Sit Amet!",
         align: TextAlign.center,
       ),

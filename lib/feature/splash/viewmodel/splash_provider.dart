@@ -5,20 +5,20 @@ import '../service/gas_service.dart';
 
 class SplashProvider extends ChangeNotifier {
   SplashProvider(this.gasService) {
-    // _fetch();
+    // _fetch(); // TODO: uncomment this line to fetch data
   }
 
   final IGasService gasService;
 
   bool isLoading = false;
+
   List<Result?> gasResource = [];
   List<Result?> dieselResource = [];
   List<Result?> lpgResource = [];
 
   late double? dieselPrice = dieselResource[7]?.dizel ?? 30.0;
   late double? gasPrice = gasResource[5]?.benzin ?? 28.00;
-  late String? lpgPrice = lpgResource[12]?.lpg ?? "13.00";
-  late double? lpgPriceToDouble = double.parse(lpgPrice ?? "13.00");
+  late double? lpgPrice = double.parse(lpgResource[12]?.lpg ?? "13.00");
 
   Future<void> _fetch() async {
     changeLoading();
@@ -34,9 +34,3 @@ class SplashProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
-
-List<Result?> gasResource = [];
-List<Result?> dieselResource = [];
-List<Result?> lpgResource = [];
-
-var isLoading = false;

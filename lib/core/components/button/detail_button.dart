@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
+import '../../../product/components/text/default_headline.dart';
 import '../../base/base_state.dart';
 
 class DetailButton extends StatelessWidget with BaseState {
@@ -11,12 +13,36 @@ class DetailButton extends StatelessWidget with BaseState {
     this.trailingIcon = Icons.arrow_drop_down_circle_outlined,
     this.leadingColor,
     this.gradient,
+    this.onPressed,
   }) : super(key: key);
 
   final String title, subtitle;
   final IconData trailingIcon;
   final LinearGradient? gradient;
   final Color? leadingColor;
+  final VoidCallback? onPressed;
+
+  void showBottomSheet(context) {
+    showMaterialModalBottomSheet(
+      expand: true,
+      bounce: true,
+      barrierColor: colorConstants.lightShark,
+      context: context,
+      builder: (context) => Column(
+        children: [
+          DefaultHeadline(text: title),
+          Expanded(
+            child: ListView.builder(
+              itemCount: 100,
+              itemBuilder: (context, index) => const ListTile(
+                title: Text("MARKA"),
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +52,7 @@ class DetailButton extends StatelessWidget with BaseState {
         color: colorConstants.lightShark,
       ),
       child: ListTile(
+        onTap: onPressed,
         contentPadding: const EdgeInsets.symmetric(horizontal: 10),
         dense: true,
         leading: CircleAvatar(
